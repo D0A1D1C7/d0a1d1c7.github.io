@@ -1,9 +1,11 @@
-## Welcome to GitHub Pages
+## "x^y",pow(x,y)
 
-"x^y",我的信息孤岛.
+Information Island, Weekly update.
 
-长投指数0.1a：每月定投沪深、港股低估值指数策略。基础公式:(50-x)*1/150，平衡策略：待研究
-### Markdown
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+### 0.1a 
+(50-x)*1/150
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -19,6 +21,7 @@ Syntax highlighted code block
 
 1. Numbered
 2. List
+
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
