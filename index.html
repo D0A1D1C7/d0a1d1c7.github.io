@@ -1,1 +1,179 @@
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~D0A1D1C7/8.embed"></iframe>
+<head>
+	<!--<script src="plotly-latest.min.js"></script>-->
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<!---<div id="tester" style="width:1000px;height:1000px;"></div>-->
+
+<div id="tester" style="width:100%;height:100%;"></div>
+
+
+<script>
+	Plotly.d3.csv('https://raw.githubusercontent.com/D0A1D1C7/d0a1d1c7.github.io/master/index/000037.XSHG.PEP.csv', function(rows){
+
+	    //
+	    //这里
+	    //
+		trace1 = {
+	      x: rows.map(function(row){          // set the x-data
+	        return row['day'];
+	      }), 
+	      y: rows.map(function(row){          // set the x-data
+	        return row['pem'];
+	      }),
+	      line: {
+		    color: 'rgb(68, 68, 68)', 
+		    width: 1
+		  }, 
+		  mode: 'lines', 
+		  name: 'pem', 
+		  showlegend: false, 
+		  type: 'scatter', 
+		  uid: '88d855', 
+		  xsrc: 'D0A1D1C7:7:a75bde', 
+		  ysrc: 'D0A1D1C7:7:78ea25'
+		};
+
+		trace2 = {
+	      x: rows.map(function(row){          // set the x-data
+	        return row['day'];
+	      }), 
+	      y: rows.map(function(row){          // set the x-data
+	        return row['p20'];
+	      }),
+	      line: {
+		    color: 'rgb(214, 39, 40)', 
+		    width: 0.5
+		  }, 
+		  mode: 'lines', 
+		  name: 'p20', 
+		  showlegend: false, 
+		  type: 'scatter', 
+		  uid: '6ae01e', 
+		  xsrc: 'D0A1D1C7:7:a75bde', 
+		  ysrc: 'D0A1D1C7:7:04b1ac'
+		};
+		trace3 = {
+	      x: rows.map(function(row){          // set the x-data
+	        return row['day'];
+	      }), 
+	      y: rows.map(function(row){          // set the x-data
+	        return row['p50'];
+	      }),
+	      line: {
+		    color: 'rgb(68, 68, 68)', 
+		    width: 0.5
+		  }, 
+		  mode: 'lines', 
+		  name: 'p50', 
+		  showlegend: false, 
+		  type: 'scatter', 
+		  uid: '0f2907', 
+		  xsrc: 'D0A1D1C7:7:a75bde', 
+		  ysrc: 'D0A1D1C7:7:bcc6a1'
+		};
+		trace4 = {
+	      x: rows.map(function(row){          // set the x-data
+	        return row['day'];
+	      }), 
+	      y: rows.map(function(row){          // set the x-data
+	        return row['p80'];
+	      }),
+	      line: {
+		    color: 'rgb(44, 160, 44)', 
+		    width: 0.5
+		  }, 
+		  mode: 'lines', 
+		  name: 'p80', 
+		  showlegend: false, 
+		  type: 'scatter', 
+		  uid: 'ce961e', 
+		  xsrc: 'D0A1D1C7:7:a75bde', 
+		  ysrc: 'D0A1D1C7:7:794f75'
+		};
+		trace5 = {
+	      x: rows.map(function(row){          // set the x-data
+	        return row['day'];
+	      }), 
+	      y: rows.map(function(row){          // set the x-data
+	        return row['close'];
+	      }),
+	      line: {color: 'rgb(31, 119, 180)'}, 
+		  mode: 'lines', 
+		  name: 'close', 
+		  type: 'scatter', 
+		  uid: 'a410d6', 
+		  xsrc: 'D0A1D1C7:7:a75bde', 
+		  yaxis: 'y3', 
+		  ysrc: 'D0A1D1C7:7:262d65'
+		};
+		trace6 = {
+	      x: rows.map(function(row){          // set the x-data
+	        return row['day'];
+	      }), 
+	      y: rows.map(function(row){          // set the x-data
+	        return row['pep'];
+	      }),
+	      line: {
+		    color: 'rgb(255, 127, 14)', 
+		    width: 1
+		  }, 
+		  mode: 'lines', 
+		  name: 'pep', 
+		  type: 'scatter', 
+		  uid: 'e9214f', 
+		  xaxis: 'x', 
+		  xsrc: 'D0A1D1C7:7:a75bde', 
+		  yaxis: 'y2', 
+		  ysrc: 'D0A1D1C7:7:b209aa'
+		};
+		data = [trace1, trace2, trace3, trace4, trace5, trace6];
+		layout = {
+		  autosize: true, 
+		  hovermode: 'closest', 
+		  legend: {
+		    x: 1.03880744611, 
+		    y: 1.01697312588
+		  }, 
+		  showlegend: true, 
+		  title: '0000037.XSHE DEMO', 
+		  xaxis: {
+		    autorange: true, 
+		    range: ['2005-04-08', '2017-08-04'], 
+		    title: 'day', 
+		    type: 'date'
+		  }, 
+		  yaxis: {
+		    autorange: true, 
+		    domain: [0, 0.45], 
+		    range: [10.7027777778, 57.2472222222], 
+		    title: 'PEM', 
+		    type: 'linear'
+		  }, 
+		  yaxis2: {
+		    anchor: 'x', 
+		    autorange: true, 
+		    domain: [0.55, 1], 
+		    range: [-5.54611111111, 105.376111111], 
+		    title: 'PEP', 
+		    type: 'linear'
+		  }, 
+		  yaxis3: {
+		    anchor: 'x', 
+		    autorange: true, 
+		    overlaying: 'y2', 
+		    range: [536.965, 6158.265], 
+		    side: 'right', 
+		    title: 'CLOSE', 
+		    type: 'linear'
+		  }
+		};
+		Plotly.plot('tester', {
+		  data: data,
+		  layout: layout
+		});
+
+	    Plotly.plot(document.getElementById('tester'), [trace], layout, {showLink: false});
+	});
+</script>
+
