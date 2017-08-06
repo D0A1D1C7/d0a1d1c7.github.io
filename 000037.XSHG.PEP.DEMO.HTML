@@ -7,8 +7,9 @@
 
 <div id="tester" style="width:100%;height:100%;"></div>
 
+
 <script>
-	Plotly.d3.csv("a.csv", function(rows){
+	Plotly.d3.csv('https://raw.githubusercontent.com/D0A1D1C7/d0a1d1c7.github.io/master/index/000037.XSHG.PEP.csv', function(rows){
 
 	    //
 	    //这里
@@ -111,7 +112,7 @@
 	        return row['day'];
 	      }), 
 	      y: rows.map(function(row){          // set the x-data
-	        return row['pem'];
+	        return row['pep'];
 	      }),
 	      line: {
 		    color: 'rgb(255, 127, 14)', 
